@@ -14,6 +14,8 @@ LABEL name="abrarov/ansible" \
     version="1.1.0" \
     description="Ansible"
 
+ENV ANSIBLE_NOCOWS=1
+
 RUN apk --no-cache add python py-pip openssl ca-certificates perl \
         sshpass openssh-client rsync unzip tar &&\
     apk --no-cache add --virtual build-dependencies \
